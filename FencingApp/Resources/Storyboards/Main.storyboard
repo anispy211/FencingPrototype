@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Login_VC_SID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2B5-Nc-UMZ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xo0-aw-c7I">
+                                <rect key="frame" x="150" y="41.5" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="UQ3-35-tWO"/>
+                                    <constraint firstAttribute="height" constant="300" id="ncY-rl-yvV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fencing App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Od8-7i-WgV">
+                                <rect key="frame" x="200" y="311.5" width="199.5" height="37"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="29"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E13-RA-jfr">
+                                <rect key="frame" x="151" y="450" width="298" height="50"/>
+                                <color key="backgroundColor" red="0.4426281072471499" green="0.76417771882191055" blue="0.97309027777777779" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1L1-fv-iHw"/>
+                                    <constraint firstAttribute="width" constant="298" id="cbp-ia-onp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                <state key="normal" title="Login with Dropbox">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginWithDBButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ySH-fa-o4c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2B5-Nc-UMZ" secondAttribute="trailing" id="BR1-So-YYb"/>
+                            <constraint firstItem="Od8-7i-WgV" firstAttribute="top" secondItem="Xo0-aw-c7I" secondAttribute="bottom" constant="-30" id="Hjk-ye-lyT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2B5-Nc-UMZ" secondAttribute="bottom" id="S5L-98-Ct3"/>
+                            <constraint firstItem="2B5-Nc-UMZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="WTM-I7-qv6"/>
+                            <constraint firstItem="Xo0-aw-c7I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cIw-CC-UhW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="E13-RA-jfr" secondAttribute="bottom" constant="100" id="eGJ-0a-URO"/>
+                            <constraint firstItem="E13-RA-jfr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mUD-re-ljp"/>
+                            <constraint firstItem="Od8-7i-WgV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sjn-mN-bhP"/>
+                            <constraint firstItem="Od8-7i-WgV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="30" id="wIh-jW-Ihg"/>
+                            <constraint firstItem="2B5-Nc-UMZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xUI-vn-NZn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImgView" destination="2B5-Nc-UMZ" id="nes-jT-xQA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="317"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon.png" width="960" height="961"/>
+    </resources>
+</document>
