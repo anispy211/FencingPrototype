@@ -14,6 +14,7 @@
 		D8018C881D4F592300E27066 /* HomeScreenFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8018C871D4F592300E27066 /* HomeScreenFlow.storyboard */; };
 		D8018C8A1D4F5B9A00E27066 /* mainCamera.png in Resources */ = {isa = PBXBuildFile; fileRef = D8018C891D4F5B9A00E27066 /* mainCamera.png */; };
 		D8077E691D92F62A002FF348 /* Demo.mov in Resources */ = {isa = PBXBuildFile; fileRef = D8077E681D92F62A002FF348 /* Demo.mov */; };
+		D8077E6D1D92FE00002FF348 /* VideoTagDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8077E6C1D92FE00002FF348 /* VideoTagDetailViewController.m */; };
 		D81B1E1B1D4A77F6005CCD91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D81B1E1A1D4A77F6005CCD91 /* main.m */; };
 		D81B1E261D4A77F6005CCD91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81B1E251D4A77F6005CCD91 /* Assets.xcassets */; };
 		D81B1E291D4A77F6005CCD91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81B1E271D4A77F6005CCD91 /* LaunchScreen.storyboard */; };
@@ -63,6 +64,8 @@
 		D8018C871D4F592300E27066 /* HomeScreenFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeScreenFlow.storyboard; sourceTree = "<group>"; };
 		D8018C891D4F5B9A00E27066 /* mainCamera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainCamera.png; sourceTree = "<group>"; };
 		D8077E681D92F62A002FF348 /* Demo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Demo.mov; sourceTree = "<group>"; };
+		D8077E6B1D92FE00002FF348 /* VideoTagDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTagDetailViewController.h; sourceTree = "<group>"; };
+		D8077E6C1D92FE00002FF348 /* VideoTagDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTagDetailViewController.m; sourceTree = "<group>"; };
 		D81B1E161D4A77F6005CCD91 /* FencingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FencingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81B1E1A1D4A77F6005CCD91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D81B1E251D4A77F6005CCD91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -167,6 +170,15 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		D8077E6A1D92FDE7002FF348 /* VideoTagDetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D8077E6B1D92FE00002FF348 /* VideoTagDetailViewController.h */,
+				D8077E6C1D92FE00002FF348 /* VideoTagDetailViewController.m */,
+			);
+			path = VideoTagDetailScreen;
+			sourceTree = "<group>";
+		};
 		D81B1E0D1D4A77F6005CCD91 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +231,7 @@
 		D81B1E311D4A8BB5005CCD91 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D8077E6A1D92FDE7002FF348 /* VideoTagDetailScreen */,
 				D8C08B281D526D3C00759174 /* ProfileScreen */,
 				D8C08B261D5100EC00759174 /* Commons */,
 				D8018C801D4F585900E27066 /* MainScreen */,
@@ -406,7 +419,7 @@
 		D81B1E0E1D4A77F6005CCD91 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Aniruddha Kadam";
 				TargetAttributes = {
 					D81B1E151D4A77F6005CCD91 = {
@@ -474,6 +487,7 @@
 				D8822E7E1D60907700D38031 /* UIImage+Resize.m in Sources */,
 				D8822E7F1D60907700D38031 /* ViewUtils.m in Sources */,
 				D81B1E1B1D4A77F6005CCD91 /* main.m in Sources */,
+				D8077E6D1D92FE00002FF348 /* VideoTagDetailViewController.m in Sources */,
 				D8C08B331D533A2600759174 /* ICSDropShadowView.m in Sources */,
 				D8822E5C1D608ADE00D38031 /* LLSimpleCamera.m in Sources */,
 				D8822E531D6083FF00D38031 /* MBProgressHUD.m in Sources */,
@@ -516,8 +530,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -559,8 +575,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -595,7 +613,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/FencingApp/Source/Classes/Commons/Constants.pch";
 				INFOPLIST_FILE = FencingApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kapilbansal.fencingapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -615,7 +633,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/FencingApp/Source/Classes/Commons/Constants.pch";
 				INFOPLIST_FILE = FencingApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kapilbansal.fencingapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

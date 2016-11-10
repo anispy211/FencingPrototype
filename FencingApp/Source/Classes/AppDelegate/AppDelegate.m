@@ -40,7 +40,8 @@
     }
     else
     {
-        [self loadLoginView];
+      //  [self loadLoginView];
+        [self loadMainView];
     }
   
     return YES;

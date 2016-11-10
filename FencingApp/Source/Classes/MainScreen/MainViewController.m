@@ -215,8 +215,49 @@
 
 #pragma mark - CAMERA
 
+- (void)createDummyTag
+{
+    NSString * moviePath = [[NSBundle mainBundle] pathForResource:@"Demo" ofType:@"mov"];
+
+    NSURL *url = [Utilities dataStoragePath];
+    url = [url URLByAppendingPathComponent:@"vid@@@###.mov"];
+    NSError *error = nil;
+    if([[NSFileManager defaultManager] fileExistsAtPath:url.path])
+    {
+        [[NSFileManager defaultManager] removeItemAtPath:url.path error:&error];
+    }[[NSFileManager defaultManager] copyItemAtPath:moviePath toPath:url.path error:&error];
+    //[self saveVideo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"tagCreated"
+                                                        object:self];
+    
+    UIAlertController * alert=   [UIAlertController
+                                  alertControllerWithTitle:@"tagCreated"
+                                  message:@"Tag Created"
+                                  preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* ok = [UIAlertAction
+                         actionWithTitle:@"OK"
+                         style:UIAlertActionStyleDefault
+                         handler:^(UIAlertAction * action)
+                         {
+                             [alert dismissViewControllerAnimated:YES completion:nil];
+                             
+                         }];
+    
+    
+    [alert addAction:ok];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+
+}
+
 - (IBAction)cameraButtonClicked:(id)sender
 {
+    
+    [self createDummyTag];
+    
+    return;
+    
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
         
         UIAlertController * alert=   [UIAlertController
